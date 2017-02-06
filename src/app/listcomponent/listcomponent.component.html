@@ -1,0 +1,7 @@
+<div class="col-sm-1"></div>
+<div class="row">
+  <div class="col-sm-5" *ngFor="let questionarray of myQuestionArray,let i=index">
+    <a [routerLink]="['detail',i]">{{questionarray.title}}</a>
+    <router-outlet></router-outlet>
+  </div>
+</div>
