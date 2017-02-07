@@ -12,9 +12,11 @@ import { QuestionarrayService } from "../questionarray.service";
 
 
 export class ListcomponentComponent {
+
   myQuestionArray: Myquestion[];
   i: number = -1;
   constructor(public questionarray: QuestionarrayService) {
+    
     this.myQuestionArray = this.questionarray.get();
     console.log(this.myQuestionArray);
   }

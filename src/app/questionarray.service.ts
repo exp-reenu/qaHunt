@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Myquestion } from "./myquestion"
 
 @Injectable()
+
 export class QuestionarrayService {
   myQuestionArray: Myquestion[] = [];
   ans = [
@@ -16,39 +17,39 @@ export class QuestionarrayService {
 
   store(title: string, description: string, answer: string) {
     this.myQuestionArray.push(new Myquestion(title, description, answer));
-
   }
+
+
   get() {
     return this.myQuestionArray;
   }
 
+
   getAnswer(id: number, answer1: string) {
     for (this.i = 0; this.i < this.ans.length; this.i++) {
-
       if (this.ans[this.i].index === id) {
         this.ans[this.i].answer.push(answer1);
         this.ans[this.i].count = this.ans[this.i].count + 1
         this.flag = 1;
       }
     }
-
     if (this.flag == 0) {
       this.ans.push({ index: id, answer: [answer1], count: 1 });
     }
     this.flag = 0;
   }
 
+
   returnanswer(index1: number) {
     this.ans1 = [];
     for (this.i = 0; this.i < this.ans.length; this.i++) {
       if (this.ans[this.i].index === index1) {
-
         this.ans1.push(this.ans[this.i].answer);
       }
     }
-
     return this.ans1;
   }
+
 
   getCount(id: number) {
     this.count = 0;
@@ -63,7 +64,6 @@ export class QuestionarrayService {
     if (this.flag1 == 0) {
       return this.count;
     }
-
   }
 
 }

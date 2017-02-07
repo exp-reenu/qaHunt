@@ -18,8 +18,9 @@ export class MakequestionComponent {
   title: string = "";
   description: string = "";
   answer: string = "";
-  constructor(private questionarrayservice: QuestionarrayService) {
-}
+
+
+  constructor(private questionarrayservice: QuestionarrayService) {  }
 
   make(form: NgForm) {
     this.title = form.value.title;

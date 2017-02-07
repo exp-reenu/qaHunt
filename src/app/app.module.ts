@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MakequestionComponent } from './makequestion/makequestion.component';
-import {router } from './app.route';
+import { router } from './app.route';
 import { ListcomponentComponent } from './listcomponent/listcomponent.component';
 import { ListdetailComponent } from './listcomponent/listdetail/listdetail.component';
 import { AnswerComponent } from './listcomponent/listdetail/answer/answer.component';
+import { HeaderComponent } from './header.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AnswerComponent } from './listcomponent/listdetail/answer/answer.compon
     MakequestionComponent,
     ListcomponentComponent,
     ListdetailComponent,
-    AnswerComponent
+    AnswerComponent,
+    HeaderComponent
 
   ],
   imports: [
@@ -25,7 +27,7 @@ import { AnswerComponent } from './listcomponent/listdetail/answer/answer.compon
     FormsModule,
     HttpModule,
     router
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
